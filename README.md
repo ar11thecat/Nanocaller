@@ -18,28 +18,9 @@ The success of the normalisation is confirmed by the fact that the peaks are wel
 
 <img width="640" height="480" alt="normalised_signal_distribution" src="https://github.com/user-attachments/assets/5a4f8008-ca37-4ca4-a4e3-929178967b69" />
 
-## Example usage:
-The following example processes and visualises the first 100 reads in the file `./sample1.pod5`:
+## Exposed classes and methods:
 ```
 from nanosplitter import normalise
 from nanosplitter import split
 from nanocaller import Pod5Handler
-
-
-def main():
-
-    ph = Pod5Handler("./sample1.pod5")
-    ph.summary()
-    reads = ph.get_signals_iter(ph.get_read_ids())
-    
-    for _ in range(100):
-        _, signal = next(reads)
-        norm_signal = normalise(signal, visualise=True)
-        features = split(norm_signal, visualise=True)        
-
-    return
-
-
-if __name__ == "__main__":
-    main()
 ```
