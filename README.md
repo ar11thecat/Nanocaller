@@ -22,5 +22,5 @@ The success of the normalisation is confirmed by the fact that the peaks are wel
 ```
 from nanosplitter import normalise
 from nanosplitter import split
-from nanocaller import Pod5Handler
+from nanosplitter import Pod5Handler
 ```
